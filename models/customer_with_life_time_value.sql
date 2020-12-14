@@ -23,7 +23,9 @@ customer_orders as (
 
 final as (
     select
-        customers.*,
+        customers.customer_id,
+        customers.first_name,
+        customers.last_name,
         order_amount as life_time_value
     from customers
     left join customer_orders using (customer_id)

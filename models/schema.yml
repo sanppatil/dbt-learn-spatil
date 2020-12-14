@@ -1,6 +1,17 @@
 version: 2
 
 models:
+
+  - name: customer_with_life_time_value
+    description: "{{ doc('customer_with_life_time_value') }}"
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+      - name: life_time_value
+        description: This is life time $$ value for customer. ;)
+
   - name: customers
     description: "{{ doc('customers') }}"
     columns:

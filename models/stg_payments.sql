@@ -6,4 +6,4 @@
         (amount/100) as Amount,
         created
     from 
-        RAW.STRIPE.PAYMENT
+        {{ source('stripe', 'payment') }}
